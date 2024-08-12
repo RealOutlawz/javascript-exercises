@@ -1,11 +1,11 @@
 const removeFromArray = function (array, ...args) {
-  const newArray = [];
-  array.forEach((item) => {
-    if (!args.includes(item)) {
-      newArray.push(item);
+  let filteredArray = [];
+  let greatFilter = array.filter(function (num) {
+    if (!args.includes(num)) {
+      filteredArray.push(num);
     }
   });
-  return newArray;
+  return filteredArray;
 };
 removeFromArray([1, 2, 3, 4], 3);
 // Do not edit below this line
