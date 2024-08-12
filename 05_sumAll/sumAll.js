@@ -1,5 +1,7 @@
 const sumAll = function (num1, num2) {
-  if (isNaN(num1) || isNaN(num2)) {
+  if (typeof num1 !== "number" || typeof num2 !== "number") {
+    return "ERROR";
+  } else if (!Number.isInteger(num1) || !Number.isInteger(num2)) {
     return "ERROR";
   }
 
@@ -29,7 +31,7 @@ sumAll(1, 4);
 // returns ERROR with non-integer parameters
 //(2.5, 4) no
 // returns ERROR with non-number parameters
-//(10, "90")no
+//(10, "90")yes
 // returns ERROR with non-number parameters
 //(10, [90, 1]) haven't tested this yet
 // Do not edit below this line
