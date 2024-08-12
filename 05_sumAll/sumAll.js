@@ -1,4 +1,8 @@
 const sumAll = function (num1, num2) {
+  let sum = 0;
+  let bigger;
+  let smaller;
+
   function isNumberInteger(num1, num2) {
     if (typeof num1 !== "number" || typeof num2 !== "number") {
       return "ERROR";
@@ -10,21 +14,26 @@ const sumAll = function (num1, num2) {
       return true;
     }
   }
+
+  function whoIsBigger(num1, num2) {
+    if (num1 > num2) {
+      bigger = num1;
+      smaller = num2;
+      return [bigger, smaller];
+    } else {
+      bigger = num2;
+      smaller = num1;
+      return [bigger, smaller];
+    }
+  }
+
   const checks = isNumberInteger(num1, num2);
   if (checks === "ERROR") {
     return "ERROR";
   }
-  let sum = 0;
-  let bigger;
-  let smaller;
 
-  if (num1 > num2) {
-    bigger = num1;
-    smaller = num2;
-  } else {
-    bigger = num2;
-    smaller = num1;
-  }
+  whoIsBigger(num1, num2);
+
   for (let i = smaller; i <= bigger; i++) {
     sum += i;
   }
