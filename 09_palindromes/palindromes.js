@@ -1,12 +1,11 @@
 const palindromes = function (str) {
   let noExtra = function (str) {
-    return str.replace(/[!.,?]/g, "");
+    return str.replace(/[!.,]/g, "");
   };
   let fixedStr = noExtra(str);
-  fixedStr = fixedStr.replace(/\s/g, "");
-  let word = fixedStr.toLowerCase();
-  let reversed = word.split("").reverse().join("");
-  if (reversed === word) {
+  fixedStr = fixedStr.toLowerCase().replace(/\s/g, "");
+  let reversed = fixedStr.split("").reverse().join("");
+  if (reversed === fixedStr) {
     return true;
   } else {
     return false;
