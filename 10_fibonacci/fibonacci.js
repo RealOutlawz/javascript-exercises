@@ -2,7 +2,6 @@ const fibonacci = function (num) {
   if (num == 0) {
     return (num = 0);
   } else if (num < 0) {
-    return "OOPS";
   } else {
     let prevNum = 0;
     let currentNum = 1;
@@ -41,8 +40,9 @@ create if statement to check if number is 0
 create if statement to check if number is negative
 create a for loop that iterates from 1 to the number
 create the variables prevNum, currentNum, and sum
-current num = 1
 prev num = 0
+current num = 1
+sum = 1
 in the loop 
 sum = prevNum + currentNum
 prevnum = currentNum
