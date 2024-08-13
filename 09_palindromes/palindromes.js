@@ -16,13 +16,13 @@ palindromes("tacos"); // false
 // Do not edit below this line
 module.exports = palindromes;
 /*
-works with multiple words xx
+works with multiple words 
 - A car, a man, a maraca. true
 - Animal loots foliated detail of stool lamina true
-doesn't just always return true x
+doesn't just always return true
 - ZZZZ car, a man, a maracaz. false
-works with numbers in a string x
+works with numbers in a string
 - rac3e3car true
-works with unevenly spaced numbers in a string x
+works with unevenly spaced numbers in a string
 - r3ace3car false
 */
